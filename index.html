@@ -7,31 +7,33 @@
   <style>
     :root { color-scheme: dark; }
     body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:#0b0f13; color:#e6edf3; }
-    .wrap { max-width:1100px; margin:0 auto; padding:20px; }
-    h1 { margin:0 0 8px; font-size: clamp(1.3rem, 2.5vw, 2rem); }
-    p { margin:0 0 14px; color:#9fb1c4; }
-    .frame { position:relative; width:100%; aspect-ratio: 4 / 3; background:#000; border:1px solid #2b3948; border-radius:12px; overflow:hidden; }
+    .wrap { max-width:1100px; margin:0 auto; padding:16px; }
+    h1 { margin:0 0 8px; font-size: clamp(1.2rem, 2.2vw, 1.8rem); }
+    p { margin:0 0 12px; color:#9fb1c4; }
+    .frame { position:relative; width:100%; aspect-ratio: 4 / 3; background:#000; border:1px solid #2b3948; border-radius:10px; overflow:hidden; }
     iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
-    .note { margin-top:10px; font-size:.9rem; color:#7f93a8; }
+    .links { margin-top:10px; display:flex; gap:12px; flex-wrap:wrap; }
     a { color:#64b5ff; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>DOOM in the Browser</h1>
-    <p>Classic DOOM (MS-DOS release) running on this GitHub Page via WebAssembly emulation.</p>
+    <h1>DOOM in Browser</h1>
+    <p>Running the classic shareware build through js-dos (WebAssembly DOS emulation).</p>
+
     <div class="frame">
       <iframe
-        src="https://archive.org/embed/msdos_Doom_1993"
+        src="https://js-dos.com/games/doom.exe.html"
         allowfullscreen
-        referrerpolicy="no-referrer"
         loading="eager"
-        title="DOOM">
+        referrerpolicy="no-referrer"
+        title="DOOM via js-dos">
       </iframe>
     </div>
-    <div class="note">
-      Tip: click inside the game window to capture input. If the embed is blocked by your network, open
-      <a href="https://archive.org/details/msdos_Doom_1993" target="_blank" rel="noopener">the DOOM page on Archive.org</a>.
+
+    <div class="links">
+      <a href="https://js-dos.com/games/doom.exe.html" target="_blank" rel="noopener">Open DOOM directly</a>
+      <a href="https://js-dos.com/games/doom2.exe.html" target="_blank" rel="noopener">Try DOOM II</a>
     </div>
   </div>
 </body>
